@@ -24,7 +24,12 @@ public class Service2Application {
         SpringApplication.run(Service2Application.class, args);
     }
 
-
+    @RequestMapping("/test")
+    public String test(){
+        System.out.println("Service-2 called... from /test");
+        return "Svc2 is responding ...";
+    }
+    
     @RequestMapping("/call2")
     public String call2(){
         System.out.println("Service-2 called...");
@@ -37,7 +42,7 @@ public class Service2Application {
     public String call3() throws InterruptedException {
         System.out.println("Service-2 called...");
 
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         return "Service-2 called...  calling Service3 ---> \n"+
                 restTemplate.getForObject("http://localhost:8773/call3", String.class);
 
