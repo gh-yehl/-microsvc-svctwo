@@ -1,0 +1,12 @@
+server:
+    port: 8080
+
+spring:
+    application:
+        name: servicetwo
+    zipkin:
+        base-url: http://www.curvelife.cn:9411
+
+    sleuth:
+        sampler:
+            probability: 1
