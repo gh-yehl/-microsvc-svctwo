@@ -44,7 +44,7 @@ public class Service2Application {
 
         Thread.sleep(3000);
         return "Service-2 called...  calling Service3 ---> \n"+
-                restTemplate.getForObject("http://svcthree.ibm-services:8080/call3", String.class);
+                restTemplate.getForObject("http://svcthree.microservices:8080/call3", String.class);
 
     }
 }
