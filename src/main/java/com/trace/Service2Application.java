@@ -42,7 +42,7 @@ public class Service2Application {
     public String call3() throws InterruptedException {
         System.out.println("Service-2 called...");
 
-        Thread.sleep(3000);
+        //Thread.sleep(3000);
         return "Service-2 called...  calling Service3 ---> \n"+
                 restTemplate.getForObject("http://svcthree.microservices:8080/call3", String.class);
 
